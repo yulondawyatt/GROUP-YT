@@ -22,8 +22,8 @@ function App() {
    <Routes>
 
     <Route path="/" element={} />
-    <Route path="/" element={} />
-    <Route path="/" element={} />
+    <Route path="/AboutMe" element={} />
+    <Route path="/Screen" element={} />
 
    </Routes>
 
