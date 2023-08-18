@@ -4,6 +4,7 @@ import './App.css'
 import NavBar from './Components/NavBar.jsx'
 import { BrowserRouter as Router,Routes, Route, Link } from "react-router-dom";
 
+
 function App() {
   const apiKey = import.meta.env.VITE_API_KEY
   
@@ -21,8 +22,8 @@ function App() {
    <Routes>
 
     <Route path="/" element={} />
-    <Route path="/" element={} />
-    <Route path="/" element={} />
+    <Route path="/AboutMe" element={} />
+    <Route path="/Screen" element={} />
 
    </Routes>
 
