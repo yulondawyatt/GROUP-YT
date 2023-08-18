@@ -2,6 +2,7 @@ import { useState } from 'react'
 import SearchBar from './Components/SearchBar.jsx'
 import './App.css'
 import NavBar from './Components/NavBar.jsx'
+import { BrowserRouter as Router,Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const apiKey = import.meta.env.VITE_API_KEY
@@ -10,11 +11,22 @@ function App() {
     .then(r => r.json())
     .then(console.log)
   return (
+    
     <>
+  <Router>
 
-    <NavBar/>
+  <NavBar/>
+  <SearchBar />
 
-      <SearchBar />
+   <Routes>
+
+    <Route path="/" element={} />
+    <Route path="/" element={} />
+    <Route path="/" element={} />
+
+   </Routes>
+
+  </Router>
     </>
   )
 }

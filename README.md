@@ -22,6 +22,9 @@ Prioritize Functinality over Design
 
 ~SearchBar Reset - When a new search is performed the previous results should be cleared and only show new results
 
+
+
+
 - useState manipulation
 
 ~Search Bar Redirect
@@ -37,7 +40,8 @@ fetch(
 
 
 
-
+NAVBAR 
+-- HOME -ABOUT ---
 
 
 
