@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import SearchBar from './Components/SearchBar.jsx'
 import './App.css'
+import NavBar from './Components/NavBar.jsx'
 
 function App() {
   const apiKey = import.meta.env.VITE_API_KEY
@@ -10,7 +11,9 @@ function App() {
     .then(console.log)
   return (
     <>
-      
+
+    <NavBar/>
+
       <SearchBar />
     </>
   )

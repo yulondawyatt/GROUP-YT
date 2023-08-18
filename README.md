@@ -29,9 +29,11 @@ Prioritize Functinality over Design
 - VIEW VIDEO - Click on displayed video and take to new page to view video.
 
 
+example on how to fetch
 
-
-
+fetch(
+  `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
+)
 
 
 
