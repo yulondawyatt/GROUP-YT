@@ -19,13 +19,13 @@ function App() {
   <NavBar/>
   <SearchBar />
 
-   <Routes>
+   {/* <Routes>
 
     <Route path="/" element={} />
     <Route path="/AboutMe" element={} />
     <Route path="/Screen" element={} />
 
-   </Routes>
+   </Routes> */}
 
   </Router>
     </>
