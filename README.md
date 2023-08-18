@@ -1,4 +1,4 @@
- "<!-- Youtube Clone Project 
+ <!-- Youtube Clone Project 
 <!--   
 
 Prioritize Functinality over Design 
