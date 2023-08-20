@@ -8,7 +8,8 @@ const SearchBar = ({ onSearch }) => {
     const handleSubmit = e => {
         e.preventDefault()
         const apiKey = import.meta.env.VITE_API_KEY
-        fetch(`https://www.googleapis.com/youtube/v3/search?q=${query}&key=${apiKey}&part=snippet&type=video`)
+        const maxResults = 8
+        fetch(`https://www.googleapis.com/youtube/v3/search?q=${query}&key=${apiKey}&part=snippet&type=video&maxResults=${maxResults}`)
             .then(r => r.json())
             .then(data => onSearch(data.items))
             .catch(err => console.log(err))

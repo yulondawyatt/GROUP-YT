@@ -2,6 +2,7 @@ import { useState } from 'react'
 import SearchBar from './Components/SearchBar.jsx'
 import './App.css'
 import NavBar from './Components/NavBar.jsx'
+import ShowPage from './Components/ShowPage.jsx'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 
@@ -19,13 +20,9 @@ function App() {
           <div className="video-container">
             {searchResults.map((video) => (
               <div key={video.id.videoId} className="video-wrapper">
-                <iframe
-                  width="550"
-                  height="300"
-                  src={`https://www.youtube-nocookie.com/embed/${video.id.videoId}?privacy-enhanced=1`}
-                  title={video.snippet.title}
-                  allowFullScreen
-                ></iframe>
+                <a href={`/video/${video.id.videoId}`}>
+                  <img src={video.snippet.thumbnails.medium.url} alt={video.snippet.title} />
+                </a>
                 <p>{video.snippet.title}</p>
               </div>
             ))}
@@ -33,8 +30,9 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<div></div>} />
-          {/* <Route path="/AboutMe" element={} />
-            <Route path="/Screen" element={} /> */}
+          <Route path="/video/:videoId" element={<ShowPage />} />
+          {/* <Route path="/AboutMe" element={ } />
+          <Route path="/Screen" element={ } /> */}
         </Routes>
       </Router>
     </>
