@@ -25,7 +25,9 @@ const NavBar =()=>{
         </div>
       </nav>
     </header>
-{/* <h1> YT TEAMMM!! </h1> */}
+
+<h1> Search For What You Want To See </h1>
+
     </>
     )
 }
