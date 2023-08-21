@@ -42,6 +42,7 @@ function App() {
         <Routes>
           <Route path="/" element={<div></div>} />
           <Route path="/AboutMe" element={<AboutList />} />
+          <Route path="/video/:videoId" element={<ShowPage />} />
         </Routes>
       </Router>
       
