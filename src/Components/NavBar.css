@@ -10,4 +10,18 @@ span{
 header{
     border: 2px solid black;
     border-radius: 100px;
+
+}
+
+li{
+    font-size: larger;
+}
+
+li:hover{
+   
+    font-size: x-large;
+}
+
+.nav-link:hover{
+color:green
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import "../Components/SearchBar.css"
 const SearchBar = ({ onSearch }) => {
 
     const [query, setQuery] = useState("")
@@ -16,7 +16,7 @@ const SearchBar = ({ onSearch }) => {
     }
 
     return (
-        <div>
+        <div className='searchBar'>
             <aside id="search">
                 <form onSubmit={handleSubmit}>
                     <div>

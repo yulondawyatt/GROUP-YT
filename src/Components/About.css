@@ -3,16 +3,23 @@
     flex-direction:column;
     padding: 9px;
     align-items: center;
+    /* justify-content: space-around; */
     border: 6px solid black;
     row-gap: 100px;
     width: 80%;
     position: relative;
     top: 35px;
     border-radius: 50px;
-    background-color: rgb(27, 176, 226);
+    background-color: rgb(20, 112, 143);
+    
 }
 
 img{
     height: 200px;
     width: 200px;
+}
+
+h1{
+    color: rgba(255, 226, 167, 1);
+    border-bottom: 3px solid black;
 }
