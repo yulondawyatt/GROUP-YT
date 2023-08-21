@@ -30,12 +30,11 @@ function App() {
             ))}
           </div>
         </div>
-        
+
         <Routes>
           <Route path="/" element={<div></div>} />
           <Route path="/video/:videoId" element={<ShowPage />} />
           <Route path="/AboutMe" element={<AboutList />} />
-          {/* <Route path="/Screen" element={ } /> */}
         </Routes>
       </Router>
     </>
