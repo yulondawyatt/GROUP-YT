@@ -1,3 +1,5 @@
+import "../Components/NavBar.css"
+
 const NavBar =()=>{
 // console.log()
     return (
@@ -6,7 +8,7 @@ const NavBar =()=>{
       <nav className="navbar navbar-expand">
         <div className="container">
           <a className="navbar-brand fs-1" href="#">
-            YouTube
+            <span>You</span>Tube
           </a>
           <ul className="navbar-nav">
             <li className="nav-item">
