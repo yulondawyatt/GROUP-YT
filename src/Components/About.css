@@ -19,7 +19,7 @@ img{
     width: 200px;
 }
 
-h1{
+.headerForAbout{
     color: rgba(255, 226, 167, 1);
     border-bottom: 3px solid black;
 }
