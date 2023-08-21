@@ -23,6 +23,7 @@ function App() {
        
         <NavBar />
 
+
         <div>
           <SearchBar onSearch={handleSearch} />
           <div className="video-container">
