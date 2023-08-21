@@ -19,6 +19,7 @@ function App() {
 
   return (
     <>
+  
       <Router>
        
         <NavBar />
@@ -43,7 +44,7 @@ function App() {
           <Route path="/AboutMe" element={<AboutList />} />
         </Routes>
       </Router>
-
+      
     </>
   )
 }
