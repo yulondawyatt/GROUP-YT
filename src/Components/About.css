@@ -51,3 +51,14 @@ img{
 from{left: -2000px}
 to{left: 0px}
 }
+
+
+.github{
+ height: 50%;
+ width:50%
+}
+
+.github:hover{
+    background-color:white;
+    border-radius: 100%;
+}
