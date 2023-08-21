@@ -8,6 +8,12 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
 
+  const apiKey = import.meta.env.VITE_API_KEY
+  
+  fetch(`https://youtube.googleapis.com/youtube/v3/search?key=${apiKey}`)
+    .then(r => r.json())
+    .then(console.log)
+
   const [searchResults, setSearchResults] = useState([])
   const handleSearch = (items) => setSearchResults(items)
 
@@ -37,6 +43,7 @@ function App() {
           <Route path="/AboutMe" element={<AboutList />} />
         </Routes>
       </Router>
+
     </>
   )
 }
