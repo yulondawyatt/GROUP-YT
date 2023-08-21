@@ -8,22 +8,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
 
-  const apiKey = import.meta.env.VITE_API_KEY
-  
-  fetch(`https://youtube.googleapis.com/youtube/v3/search?key=${apiKey}`)
-    .then(r => r.json())
-    .then(console.log)
-
   const [searchResults, setSearchResults] = useState([])
   const handleSearch = (items) => setSearchResults(items)
 
   return (
     <>
-  
-      <Router>
-       
-        <NavBar />
 
+      <Router>
+
+        <NavBar />
 
         <div>
           <SearchBar onSearch={handleSearch} />
@@ -45,7 +38,7 @@ function App() {
           <Route path="/video/:videoId" element={<ShowPage />} />
         </Routes>
       </Router>
-      
+
     </>
   )
 }

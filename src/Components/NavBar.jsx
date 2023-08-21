@@ -26,7 +26,7 @@ const NavBar =()=>{
       </nav>
     </header>
 
-<h1 className="search"> Search For What You Want To See </h1>
+{/* <h1 className="search"> Search For What You Want To See </h1> */}
 
     </>
     )
