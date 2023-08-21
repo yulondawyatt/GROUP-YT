@@ -5,6 +5,9 @@ const ShowPage = () => {
 
     const [videoDetails, setVideoDetails] = useState(null)
     const { videoId } = useParams()
+    const [name, setName] = useState("")
+    const [comment, setComment] = useState("")
+    const [comments, setComments] = useState([])
 
     useEffect(() => {
         if (videoId) {
@@ -12,9 +15,19 @@ const ShowPage = () => {
             fetch(`https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${apiKey}&part=snippet`)
                 .then(r => r.json())
                 .then(data => { if (data.items.length > 0) setVideoDetails(data.items[0]) })
-                .catch(err => { console.error(err) })
+                .catch(err => { console.log(err) })
         }
     }, [])
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (name && comment) {
+            const newComment = { name, comment }
+            setComments([...comments, newComment])
+            setName("")
+            setComment("")
+        }
+    }
 
     return (
         <div>
@@ -30,6 +43,40 @@ const ShowPage = () => {
                     ></iframe>
                 </div>
             )}
+            <div>
+                <h3>Comments</h3>
+                <ul>
+                    {comments.map((comment, index) => (
+                        <li key={index}>
+                            <strong>{comment.name}: </strong>
+                            {comment.comment}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div className='comment-form'>
+                <h3>Add a Comment</h3>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor="name">Name:</label>
+                        <input
+                            type="text"
+                            id="name"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="comment">Comment:</label>
+                        <textarea
+                            id="comment"
+                            value={comment}
+                            onChange={e => setComment(e.target.value)}
+                        ></textarea>
+                    </div>
+                    <button type="submit">Submit Comment</button>
+                </form>
+            </div>
         </div>
     )
 }
