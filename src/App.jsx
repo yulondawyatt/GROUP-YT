@@ -13,11 +13,10 @@ function App() {
 
   return (
     <>
-  
-      <Router>
-       
-        <NavBar />
 
+      <Router>
+
+        <NavBar />
 
         <div>
           <SearchBar onSearch={handleSearch} />
@@ -39,7 +38,7 @@ function App() {
           <Route path="/video/:videoId" element={<ShowPage />} />
         </Routes>
       </Router>
-      
+
     </>
   )
 }
