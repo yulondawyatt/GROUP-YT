@@ -1,3 +1,6 @@
+import "../Components/NavBar.css"
+import { Link } from "react-router-dom"
+
 const NavBar =()=>{
 // console.log()
     return (
@@ -6,18 +9,17 @@ const NavBar =()=>{
       <nav className="navbar navbar-expand">
         <div className="container">
           <a className="navbar-brand fs-1" href="#">
-            YouTube
+            <span>You</span>Tube
           </a>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link"  href="#">
-                Home
-              </a>
+              <Link to="/" className="nav-link">  Home</Link>  
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                About
-              </a>
+              <Link to="/AboutMe" className="nav-link"> About </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/video/:videoId" className="nav-link"> Show Page </Link>
             </li>
           </ul>
         </div>

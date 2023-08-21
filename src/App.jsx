@@ -2,9 +2,9 @@ import { useState } from 'react'
 import SearchBar from './Components/SearchBar.jsx'
 import './App.css'
 import NavBar from './Components/NavBar.jsx'
+import AboutList from './Components/AboutList.jsx';
 import ShowPage from './Components/ShowPage.jsx'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 
 function App() {
 
@@ -20,7 +20,9 @@ function App() {
   return (
     <>
       <Router>
+       
         <NavBar />
+
         <div>
           <SearchBar onSearch={handleSearch} />
           <div className="video-container">
@@ -34,11 +36,11 @@ function App() {
             ))}
           </div>
         </div>
+
         <Routes>
           <Route path="/" element={<div></div>} />
           <Route path="/video/:videoId" element={<ShowPage />} />
-          {/* <Route path="/AboutMe" element={ } />
-          <Route path="/Screen" element={ } /> */}
+          <Route path="/AboutMe" element={<AboutList />} />
         </Routes>
       </Router>
 

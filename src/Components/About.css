@@ -1,0 +1,18 @@
+.AboutMe{
+    display:flex;
+    flex-direction:column;
+    padding: 10px;
+    align-items: center;
+    border: 6px solid black;
+    row-gap: 100px;
+    width: 80%;
+    position: relative;
+    top: 35px;
+    border-radius: 100px;
+    background-color: rgb(214, 112, 112);
+}
+
+img{
+    height: 200px;
+    width: 200px;
+}
