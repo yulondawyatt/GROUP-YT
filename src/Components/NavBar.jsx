@@ -8,9 +8,9 @@ const NavBar =()=>{
     <header>
       <nav className="navbar navbar-expand">
         <div className="container">
-          <a className="navbar-brand fs-1" href="#">
+        <Link to="/" className="navbar-brand fs-1">
             <span>You</span>Tube
-          </a>
+            </Link>
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link to="/" className="nav-link">  Home</Link>  
@@ -18,9 +18,9 @@ const NavBar =()=>{
             <li className="nav-item">
               <Link to="/AboutMe" className="nav-link"> About </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/video/:videoId" className="nav-link"> Show Page </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
