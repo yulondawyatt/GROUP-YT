@@ -1,3 +1,8 @@
 span{
     color: red
 }
+
+.headerForAbout{
+    position: relative;
+    top: 20px;
+}
