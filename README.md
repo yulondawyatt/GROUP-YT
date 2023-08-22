@@ -1,4 +1,4 @@
- "<!-- Youtube Clone Project 
+ <!-- Youtube Clone Project 
 <!--   
 
 Prioritize Functinality over Design 
@@ -22,6 +22,9 @@ Prioritize Functinality over Design
 
 ~SearchBar Reset - When a new search is performed the previous results should be cleared and only show new results
 
+
+
+
 - useState manipulation
 
 ~Search Bar Redirect
@@ -29,36 +32,41 @@ Prioritize Functinality over Design
 - VIEW VIDEO - Click on displayed video and take to new page to view video.
 
 
+example on how to fetch
+
+fetch(
+  `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
+)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+NAVBAR 
+-- HOME -ABOUT ---
 
    -->
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
